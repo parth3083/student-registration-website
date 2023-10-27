@@ -1,0 +1,1 @@
+This is the test file made by parth. and this is in the static folder.

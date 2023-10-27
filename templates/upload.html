@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Services{% endblock title %}Home
+{% block body %} 
+<h1 class="text-center">Student Document Upload</h1>
+<div class="container my-4">
+    <form method="POST" action="/upload">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Name</label>
+            <input type="text" class="form-control" id="inputEmail4" name="name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Enrolment No.</label>
+            <input type="number" class="form-control" id="inputPassword4" name="enrol"> 
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Upload 10 th Marksheet</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Upload 12 th Marksheet</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Upload pdf of all marksheet of previous semesters</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+        </div>
+    </div>
+    <div><button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+
+      </form>
+  </div>
+  {% endblock body %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Password Configuration{% endblock title %}Home
+{% block body %}
+
+<h1 class="text-center">Password Configuration</h1>
+<div class="container my-4">
+    <form method="POST" action="/forgot">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" name="usanme1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"> Old Password (if remembered)</label>
+          <input type="password" class="form-control" id="op" name="op">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"> New Password </label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="np">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Change</button>
+      </form>
+</div>{% endblock body %}
